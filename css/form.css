@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #fff;
+
+}
+
+.form__input{
+    display: flex;
+    flex-grow:1;
+}
+
+.form__button--addNewTask {
+    display: flex;
+    flex-shrink:0;
+    padding:5px;
+    margin-left: 10px;
+    
+    background-color: teal;
+    color: #fff;
+    border-color: teal;
+}
