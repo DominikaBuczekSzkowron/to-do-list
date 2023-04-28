@@ -1,10 +1,29 @@
 .list {
     padding: 10px;
     background-color: #fff;
-    margin: 0px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .list__item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 30px;
+    word-break: break-word;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+    display: flex;
+    text-align: start;
+}
+
+.list__item--text {
+    display: flex;
+    flex-grow: 1;
+    align-self: center;
+    margin: 0px 5px;
 }
