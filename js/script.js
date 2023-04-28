@@ -1,13 +1,6 @@
 {
     const tasks = [
-        {
-            content: "zadanie 1",
-            done: false,
-        },
-        {
-            content: "zadanie 2",
-            done: true,
-        },
+      
     ];
 
     const addNewTask = (newTaskContent) => {
@@ -45,16 +38,17 @@
             });
         });
     }
-
-    const render = () => {
+    
+      const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-        <li class="list__item${task.done ? " list__item--done" : ""}">
-        <button class="js-done">emotka zrobione</button>
-        ${task.content}
-        <button class="js-remove">emotka usuń</button>
+        <li class="list__item">
+        <button class="js-done form__button--done">${task.done ? "✔" : ""}</button>
+        <span class="list__item--text ${task.done ? " list__item--done" : ""}">${task.content}</span>
+
+        <button class="js-remove form__button--remove">🗑️</button>
         </li>
         `;
         }
@@ -66,14 +60,17 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
-        if (newTaskContent === "") {
-            return;
+        const newTaskInput = document.querySelector(".js-newTask");
+        const newTaskContent = newTaskInput.value.trim();
+        
+        if(newTaskContent !== "") {
+         addNewTask(newTaskContent);
+         newTaskInput.value = "";
         }
-        addNewTask(newTaskContent);
+        newTaskInput.focus();
+     };
 
-    };
     const init = () => {
         render();
 
@@ -83,4 +80,6 @@
     };
 
     init();
+
+    
 }
