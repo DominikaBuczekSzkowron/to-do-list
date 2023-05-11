@@ -1,7 +1,5 @@
 {
-    const tasks = [
-      
-    ];
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
 
@@ -38,19 +36,18 @@
             });
         });
     }
-    
-      const render = () => {
+
+    const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-        <li class="list__item">
-        <button class="js-done form__button--done">${task.done ? "✔" : ""}</button>
-        <span class="list__item--text ${task.done ? " list__item--done" : ""}">${task.content}</span>
+          <li class="section__list--item">
+          <button class="js-done section__form--buttonDone">${task.done ? "✔" : ""}</button>
+          <span class="section__list--text ${task.done ? " section__list--doneItem" : ""}">${task.content}</span>
 
-        <button class="js-remove form__button--remove">🗑️</button>
-        </li>
-        `;
+          <button class="js-remove section__form--buttonRemove">🗑️</button>
+          </li>`;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
@@ -63,13 +60,13 @@
 
         const newTaskInput = document.querySelector(".js-newTask");
         const newTaskContent = newTaskInput.value.trim();
-        
-        if(newTaskContent !== "") {
-         addNewTask(newTaskContent);
-         newTaskInput.value = "";
+
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+            newTaskInput.value = "";
         }
         newTaskInput.focus();
-     };
+    };
 
     const init = () => {
         render();
@@ -81,5 +78,5 @@
 
     init();
 
-    
+
 }

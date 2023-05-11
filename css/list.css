@@ -1,29 +1,33 @@
-.list {
-    padding: 10px;
+.section__list {
+    padding: 20px;
     background-color: #fff;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+  }
 
-.list__item {
+.section__list--item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 30px;
     word-break: break-word;
+    padding: 0, 20px, 0, 20px;
+    border-bottom: 1px, solid, #eee;
 }
 
-.list__item--done {
+.section__list--doneItem {
     text-decoration: line-through;
     display: flex;
     text-align: start;
 }
 
-.list__item--text {
+.section__list--text {
     display: flex;
     flex-grow: 1;
     align-self: center;
-    margin: 0px 5px;
+    margin: 0px 20px;
+    border-bottom: 1px;
+    border-color: 1px, solid, #eee;
 }
