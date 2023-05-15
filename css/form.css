@@ -66,11 +66,13 @@
     color: #fff;
     border-color: teal;
     border-style: solid;
+    transition: 1s;
 }
 
 .section__form--buttonAddNewTask:hover {
     border-color: hsl(180, 100%, 30%);
     background-color: hsl(180, 100%, 30%);
+    transform: scale(1.1);
 }
 
 @media (min-width:768px) {
@@ -101,11 +103,12 @@
     flex-shrink: 0;
     align-items: center;
     justify-content: start;
+    transition: 1s;
 
 }
 
 .section__form--buttonDone:hover {
-    background-color: hsl(120, 82%, 42%);
+    background-color: hsl(120, 82%, 45%);
 }
 
 
@@ -116,8 +119,9 @@
     border: none;
     text-decoration: none;
     justify-content: end;
+    transition: 1s;
 }
 
 .section__form--buttonRemove:hover {
-    background-color: hsl(0, 100%, 65%);
+    background-color: hsl(0, 100%, 70%);
 }
