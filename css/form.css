@@ -69,6 +69,7 @@
     border-color: teal;
     border-style: solid;
     transition: 1s;
+    cursor: pointer;
 }
 
 .section__form--buttonAddNewTask:hover {
@@ -100,8 +101,8 @@
 }
 
 .section__form--buttonDone {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     color: #fff;
     background-color: rgb(17, 173, 17);
     border: none;
@@ -111,6 +112,7 @@
     align-items: center;
     justify-content: start;
     transition: 1s;
+    cursor: pointer;
 }
 
 .section__form--buttonDone:hover {
@@ -118,8 +120,8 @@
 }
 
 .section__form--buttonRemove {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background-color: red;
     border: none;
     text-decoration: none;
@@ -127,6 +129,7 @@
     justify-content: center;
     align-items: center;
     transition: 1s;
+    cursor: pointer;
 }
 
 .section__form--buttonRemove:hover {
@@ -142,6 +145,8 @@
     flex-shrink: 0;
     justify-content: right;
     align-items: center;
+    cursor: pointer;
+    padding: 0 10px 0 0 ;
 }
 
 @media (max-width:767px) {
@@ -163,7 +168,8 @@
 
 .section__bothButtons:disabled {
     color: #b1a9a9;
-    padding: 20px;
+    padding: 0 10px 0 0 ;
+    cursor: auto;
 
 }
 
@@ -181,6 +187,7 @@
     display: flex;
     justify-content: left;
     flex-grow: 1;
+    padding: 0 20px 0 20px;
 }
 
 
