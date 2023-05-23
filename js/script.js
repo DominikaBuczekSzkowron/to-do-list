@@ -11,10 +11,7 @@
     };
 
     const removeTask = (taskIndex) => {
-        tasks = [
-            ...tasks.slice(0, taskIndex),
-            ...tasks.slice(taskIndex + 1),
-        ];
+        tasks = tasks.filter((value, index) => taskIndex !== index);
         render();
     };
 
@@ -59,12 +56,25 @@
 
         for (const task of tasks) {
             htmlString += `
-      <li class="section__list--item ${task.done && hideDoneTasks ? "section__list--hideItem" : ""} js-task">
-      <button class="js-done section__form--buttonDone">${task.done ? "✔" : ""}</button>
-      <span class="section__list--text ${task.done ? " section__list--doneItem" : ""}">${task.content}</span>
+      <li class="section__list--item ${task.done && hideDoneTasks
+                    ? "section__list--hideItem"
+                    : ""} js-task">
+        
+        <button class="js-done section__form--buttonDone">${task.done
+                    ? "✔"
+                    : ""}
+        </button>
 
-      <button class="js-remove section__form--buttonRemove">🗑️</button>
-      </li>`;
+        <span class="section__list--text ${task.done
+                    ? " section__list--doneItem"
+                    : ""}">${task.content}
+        </span>
+
+        <button class="js-remove section__form--buttonRemove">
+          🗑️
+        </button>
+      </li>
+      `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
